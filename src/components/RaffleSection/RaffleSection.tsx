@@ -1,5 +1,8 @@
 import { Button } from 'components';
-function RaffleSection() {
+import {Props} from "./types";
+import {TicketCard} from "components";
+
+function RaffleSection({ticketCards}: Props) {
   return (
       <div className="bg-gray-50 flex flex-1 flex-col lg:flex-row lg:p-8 p-2 sm:p-4">
           <div className="bg-white shadow rounded w-full lg:w-1/6">
@@ -10,7 +13,9 @@ function RaffleSection() {
                   </div>
               </div>
               <div className="p-3 lg:p-10 flex flex-row lg:flex-col items-center">
-                    Left
+                  {ticketCards.map((item, key) => (
+                      <TicketCard key={key} image={item.image} available_cards={item.available_cards}/>
+                  ))}
               </div>
           </div>
           <div className="p-3 flex-1 flex flex-col lg:ml-3 bg-white shadow rounded">

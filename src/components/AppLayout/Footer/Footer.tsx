@@ -23,7 +23,7 @@ function Footer() {
                                 }
                                 <ul>
                                     {menuGroupItem.subMenus.map((item: MenuItem, menuKey: number) => (
-                                        <li key={`menu-item-${groupKey}`} className="mb-2">
+                                        <li key={`menu-item-${menuKey}`} className="mb-2">
                                             <a href={item.link} className="text-sm">
                                                 {item.label}
                                             </a>

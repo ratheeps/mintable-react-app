@@ -3,6 +3,6 @@ import AppLayout from './AppLayout';
 
 test('renders', () => {
   render(<AppLayout />);
-  const linkElement = screen.getByText(/Header/i);
+  const linkElement = screen.getByText(/Ethereum/i);
   expect(linkElement).toBeInTheDocument();
 });

@@ -3,6 +3,6 @@ import Home from './Home';
 
 test('renders', () => {
   render(<Home />);
-  const linkElement = screen.getByText(/Home Page/i);
+  const linkElement = screen.getByText(/Get More Tickets/i);
   expect(linkElement).toBeInTheDocument();
 });
