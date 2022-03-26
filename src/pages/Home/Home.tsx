@@ -2,8 +2,10 @@ import React from 'react';
 
 function Home() {
   return (
-    <div>
-        <h2>Home Page</h2>
+    <div className="bg-brand">
+        <h1 className="text-3xl font-bold underline">
+            Home Page
+        </h1>
     </div>
   );
 }
