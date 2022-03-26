@@ -13,8 +13,7 @@ function Footer() {
             <div className="mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-32">
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className={classNames(
-                        "grid gap-8 xl:col-span-2",
-                        `grid-cols-${footerMenu.length}`
+                        "grid gap-8 xl:col-span-2 lg:grid-flow-col sm:grid-flow-row",
                     )}>
                         {footerMenu.map((menuGroupItem: MenuGroup, groupKey: number) => (
                             <div key={`menu-group-${groupKey}`}>

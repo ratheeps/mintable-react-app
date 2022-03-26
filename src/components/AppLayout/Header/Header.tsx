@@ -40,13 +40,20 @@ function Header() {
                                             <input
                                                 id="search"
                                                 name="search"
-                                                className="bg-white placeholder-gray-500 block w-full px-2 py-1.5 border border-gray-300 rounded-l  focus:outline-none sm:text-sm overflow-hidden"
+                                                className={classNames(
+                                                    "bg-white font-normal placeholder-gray-500 block w-full px-2",
+                                                    "py-1.5 border border-gray-300 rounded-l  focus:outline-none",
+                                                    "sm:text-sm overflow-hidden"
+                                                )}
                                                 placeholder="Search for anything"
                                                 type="search"
                                             />
 
                                             <div
-                                                className="z-10 bg-indigo-100 inset-y-0 right-0 pr-3 flex rounded-r items-center pointer-events-none ">
+                                                className={classNames(
+                                                    "z-10 bg-indigo-100 inset-y-0 right-0 pr-3 flex rounded-r",
+                                                    "items-center pointer-events-none"
+                                                )}>
                                                 <Menu>
                                                     <Menu.Button className="p-2 flex items-center justify-center">
                                                         <span className="hidden text-sm lg:flex">Type</span>
@@ -78,7 +85,10 @@ function Header() {
                                     <div className="flex items-center lg:hidden">
                                         {/* Mobile screen menu button */}
                                         <Disclosure.Button
-                                            className="ml-2 inline-flex rounded-md text-gray-400 items-center justify-center">
+                                            className={classNames(
+                                                "ml-2 inline-flex rounded-md text-gray-400 items-center",
+                                                "justify-center"
+                                            )}>
                                             <span className="sr-only"/>
                                             {open ? (
                                                 <IconContext.Provider value={{className: "h-8 w-8 block"}}>
