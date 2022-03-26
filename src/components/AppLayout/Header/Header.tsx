@@ -7,6 +7,7 @@ import {Disclosure, Menu} from '@headlessui/react';
 import {headerMenu} from 'config/menu';
 import {name} from 'config/env';
 import Logo from 'assets/images/logo.svg';
+import {MenuItem} from "./types"
 
 function Header() {
     return (
@@ -94,16 +95,16 @@ function Header() {
                             </div>
                             {/*Mobile menu container*/}
                             <div className="hidden flex-1 lg:flex px-2 lg:ml-6 lg:justify-end lg:space-x-8">
-                                {headerMenu.map((item) => (
+                                {headerMenu.map((item: MenuItem) => (
                                     <a
-                                        key={item.name}
-                                        href={item.href}
+                                        key={item.label}
+                                        href={item.link}
                                         className={classNames(
                                             "border-transparent  inline-flex items-center mx-1 mt-1 border-b-2",
                                             "text-sm font-medium text-gray-500"
                                         )}
                                     >
-                                        {item.name}
+                                        {item.label}
                                     </a>
                                 ))}
                             </div>
@@ -112,16 +113,16 @@ function Header() {
 
                     <Disclosure.Panel className="lg:hidden">
                         <div className="pt-2 pb-3 space-y-1">
-                            {headerMenu.map((item) => (
+                            {headerMenu.map((item: MenuItem) => (
                                 <a
-                                    key={item.name}
-                                    href={item.href}
+                                    key={item.label}
+                                    href={item.link}
                                     className={classNames(
                                         'border-transparent block pl-3 pr-4 py-2 border-l-4 text-base font-medium',
                                         'text-gray-600 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-800'
                                     )}
                                 >
-                                    {item.name}
+                                    {item.label}
                                 </a>
                             ))}
                         </div>
