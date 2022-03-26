@@ -2,7 +2,7 @@ import React from 'react';
 
 function Home() {
   return (
-    <div className="bg-brand">
+    <div>
         <h1 className="text-3xl font-bold underline">
             Home Page
         </h1>
